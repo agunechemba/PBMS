@@ -1,0 +1,459 @@
+<!-- ============================================================
+     index.html — Prime Maintenance Culture lead form
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Building Maintenance Assessment | Prime Maintenance Culture</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+
+    <div class="brand">
+       <img src="logo.svg" alt="PMC" class="logo">
+      <div>
+        <h1>Prime Maintenance Culture</h1>
+        <p>Deep building maintenance · Repairs · Restoration</p>
+      </div>
+    </div>
+    <h2>Request a Building Maintenance Assessment</h2>
+    <p class="hero__sub">
+      For schools, banks, churches, industries, offices and homes — we handle the
+      maintenance issues regular cleaners can't, and recommend repairs where they're needed.
+    </p>
+    <ul class="badges">
+      <li>✓ Free assessment</li>
+      <li>✓ Response within 24 hours</li>
+      <li>✓ Trained maintenance technicians</li>
+    </ul>
+  </header>
+
+  <!-- ============ STEPPER ============ -->
+  <ol class="stepper" id="stepper">
+    <li class="stepper__item is-active">
+      <span class="stepper__num">1</span><span class="stepper__label">Contact</span>
+    </li>
+    <li class="stepper__item">
+      <span class="stepper__num">2</span><span class="stepper__label">Building</span>
+    </li>
+    <li class="stepper__item">
+      <span class="stepper__num">3</span><span class="stepper__label">Needs</span>
+    </li>
+    <li class="stepper__item">
+      <span class="stepper__num">4</span><span class="stepper__label">Budget</span>
+    </li>
+  </ol>
+
+  <!-- ============ FORM CARD ============ -->
+  <div class="card" id="formCard">
+  <!-- NEW: resume banner (hidden by default) -->
+  <div class="resume-banner hidden" id="resumeBanner" role="status" aria-live="polite">
+    <span class="resume-banner__icon">💾</span>
+    <span class="resume-banner__text" id="resumeText">
+      We restored your saved progress on this device.
+    </span>
+    <button type="button" class="resume-banner__clear" id="clearSavedBtn">
+      Start fresh
+    </button>
+  </div>
+    <form id="leadForm" novalidate>
+
+      <!-- ---------- STEP 1 : CONTACT ---------- -->
+      <section class="step" data-step="0">
+        <h3 class="step__title">Your contact details</h3>
+        <p class="step__hint">So we know who to reach and how. Takes under a minute.</p>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="fullName">Full name <span class="req">*</span></label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g. Adebayo Johnson" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="orgName">Organization / building name</label>
+            <input id="orgName" name="orgName" type="text" placeholder="e.g. Grace Academy, Ikeja Branch">
+          </div>
+
+          <div class="field">
+            <label for="role">Your role</label>
+            <select id="role" name="role">
+              <option value="">Select…</option>
+              <option>Owner / Landlord</option>
+              <option>Facility Manager</option>
+              <option>School Administrator</option>
+              <option>Bank Branch Manager</option>
+              <option>Church Administrator / Pastor</option>
+              <option>Property Manager</option>
+              <option>Operations / Admin Officer</option>
+              <option>Tenant</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone / WhatsApp <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="e.g. 0803 000 0000" autocomplete="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address <span class="req">*</span></label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="bestTime">Best time to contact you</label>
+            <select id="bestTime" name="bestTime">
+              <option value="">Select…</option>
+              <option>Morning (8am – 12pm)</option>
+              <option>Afternoon (12pm – 4pm)</option>
+              <option>Evening (4pm – 7pm)</option>
+              <option>Anytime</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:18px;">
+          <label>Preferred contact method</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="contactMethod" value="Phone call" checked><span>📞 Phone call</span></label>
+            <label class="chip"><input type="radio" name="contactMethod" value="WhatsApp"><span>💬 WhatsApp</span></label>
+            <label class="chip"><input type="radio" name="contactMethod" value="Email"><span>✉️ Email</span></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- STEP 2 : BUILDING ---------- -->
+      <section class="step hidden" data-step="1">
+        <h3 class="step__title">Building profile</h3>
+        <p class="step__hint">Helps us prepare the right team and equipment before we arrive.</p>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="buildingType">Building type <span class="req">*</span></label>
+            <select id="buildingType" name="buildingType" required>
+              <option value="">Select…</option>
+              <option value="School / Educational">School / Educational</option>
+              <option value="Bank / Financial">Bank / Financial</option>
+              <option value="Church / Religious">Church / Religious</option>
+              <option value="Industry / Factory">Industry / Factory</option>
+              <option value="House / Residential">House / Residential</option>
+              <option value="Office / Commercial">Office / Commercial</option>
+              <option value="Hospital / Clinic">Hospital / Clinic</option>
+              <option value="Hotel / Hospitality">Hotel / Hospitality</option>
+              <option value="Warehouse / Storage">Warehouse / Storage</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field hidden" id="otherBuildingWrap">
+            <label for="otherBuilding">Please specify building type <span class="req">*</span></label>
+            <input id="otherBuilding" name="otherBuilding" type="text" placeholder="e.g. Shopping mall" disabled>
+          </div>
+
+          <div class="field">
+            <label for="siteCount">Number of buildings / sites</label>
+            <select id="siteCount" name="siteCount">
+              <option value="">Select…</option>
+              <option>1 building</option>
+              <option>2 – 5 buildings</option>
+              <option>6 – 10 buildings</option>
+              <option>More than 10</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="size">Approx. size</label>
+            <input id="size" name="size" type="text" placeholder="e.g. 3 floors, 12 classrooms, 800 sqm">
+          </div>
+
+          <div class="field span-2">
+            <label for="location">Building address / location <span class="req">*</span></label>
+            <input id="location" name="location" type="text" placeholder="Street, area, landmark" required>
+          </div>
+
+          <div class="field">
+            <label for="cityState">City / State <span class="req">*</span></label>
+            <input id="cityState" name="cityState" type="text" placeholder="e.g. Ikeja, Lagos" required>
+          </div>
+
+          <div class="field">
+            <label for="accessNotes">Access notes</label>
+            <input id="accessNotes" name="accessNotes" type="text" placeholder="Parking, security, height, restricted hours">
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:18px;">
+          <label>Is the building currently occupied / operational?</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="occupied" value="Yes, fully operational" checked><span>Yes, fully operational</span></label>
+            <label class="chip"><input type="radio" name="occupied" value="Partially occupied"><span>Partially occupied</span></label>
+            <label class="chip"><input type="radio" name="occupied" value="Vacant / not in use"><span>Vacant / not in use</span></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- STEP 3 : MAINTENANCE NEEDS ---------- -->
+      <section class="step hidden" data-step="2">
+        <h3 class="step__title">What do you need done?</h3>
+        <p class="step__hint">This is the part that tells us whether you truly need our specialised service.</p>
+
+        <div class="field" data-required-group="needs">
+          <label>What do you need help with? <span class="req">*</span> <span style="font-weight:400;color:var(--muted);">(select all that apply)</span></label>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="needs" value="Deep cleaning beyond regular cleaners"><span>Deep cleaning beyond regular cleaners</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Post-construction cleaning"><span>Post-construction cleaning</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="High-level / exterior & façade cleaning"><span>High-level / exterior & façade</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Roof, gutters & drainage"><span>Roof, gutters & drainage</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Floor restoration / polishing"><span>Floor restoration / polishing</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Painting & wall repairs"><span>Painting & wall repairs</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Plumbing fixes"><span>Plumbing fixes</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Electrical fixes"><span>Electrical fixes</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Mould, damp & leak treatment"><span>Mould, damp & leak treatment</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Pest control / fumigation"><span>Pest control / fumigation</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Inspection / maintenance audit"><span>Inspection / maintenance audit</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Emergency repairs"><span>Emergency repairs</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Ongoing maintenance contract"><span>Ongoing maintenance contract</span></label>
+            <label class="chip"><input type="checkbox" name="needs" value="Other"><span>Other</span></label>
+          </div>
+        </div>
+
+        <div class="field hidden" id="otherNeedWrap">
+          <label for="otherNeed">Please specify what you need <span class="req">*</span></label>
+          <input id="otherNeed" name="otherNeed" type="text" placeholder="Tell us briefly" disabled>
+        </div>
+
+        <div class="field">
+          <label for="issue">Describe the issue <span class="req">*</span></label>
+          <textarea id="issue" name="issue" placeholder="e.g. The 3-storey school block has stained ceilings, blocked gutters and mould in the ground-floor classrooms." required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="cleanerLimit">What have regular cleaners been unable to handle?</label>
+          <textarea id="cleanerLimit" name="cleanerLimit" placeholder="e.g. They can't reach the high windows, and they don't handle the leaking roof or cracked walls."></textarea>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="duration">How long has the issue existed?</label>
+            <select id="duration" name="duration">
+              <option value="">Select…</option>
+              <option>Less than 1 month</option>
+              <option>1 – 6 months</option>
+              <option>6 – 12 months</option>
+              <option>More than a year</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="pastRepairs">Have you had repairs done before?</label>
+            <select id="pastRepairs" name="pastRepairs">
+              <option value="">Select…</option>
+              <option>No, this is the first time</option>
+              <option>Yes, but the problem came back</option>
+              <option>Yes, and it was resolved</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="urgency">How soon do you need service? <span class="req">*</span></label>
+            <select id="urgency" name="urgency" required>
+              <option value="">Select…</option>
+              <option value="emergency">🚨 Emergency – within 24–48 hours</option>
+              <option value="This week">This week</option>
+              <option value="In 2 – 4 weeks">In 2 – 4 weeks</option>
+              <option value="In 1 – 3 months">In 1 – 3 months</option>
+              <option value="Just planning / budgeting">Just planning / budgeting</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="frequency">One-time or recurring?</label>
+            <select id="frequency" name="frequency">
+              <option value="">Select…</option>
+              <option>One-time job</option>
+              <option>Monthly</option>
+              <option>Quarterly</option>
+              <option>Bi-annual</option>
+              <option>Annual</option>
+              <option>Ongoing contract</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="startDate">Preferred start date</label>
+            <input id="startDate" name="startDate" type="date">
+          </div>
+
+          <div class="field">
+            <label for="siteVisit">Do you need a site visit?</label>
+            <select id="siteVisit" name="siteVisit">
+              <option value="">Select…</option>
+              <option>Yes, please arrange one</option>
+              <option>No, send a quote instead</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:18px;">
+          <label>What do you need from us?</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="serviceType" value="Recommendation / assessment only"><span>Recommendation only</span></label>
+            <label class="chip"><input type="radio" name="serviceType" value="Repairs and fixes" checked><span>Repairs & fixes</span></label>
+            <label class="chip"><input type="radio" name="serviceType" value="Both recommendation and repairs"><span>Both</span></label>
+          </div>
+        </div>
+
+        <div class="callout hidden" id="emergencyNote">
+          <span>🚨</span>
+          <div>
+            <strong>Emergency request</strong>
+            For urgent issues, please also call or WhatsApp us directly on
+            <a href="tel:+2349066115252">+234 90 6611 5252</a> so we can respond immediately.
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- STEP 4 : BUDGET & CONSENT ---------- -->
+      <section class="step hidden" data-step="3">
+        <h3 class="step__title">Budget & final details</h3>
+        <p class="step__hint">This helps us recommend the right scope. Budget info is optional.</p>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="budgetRange">Estimated budget range</label>
+            <select id="budgetRange" name="budgetRange">
+              <option value="">Select…</option>
+              <option>Under ₦100,000</option>
+              <option>₦100,000 – ₦500,000</option>
+              <option>₦500,000 – ₦2,000,000</option>
+              <option>₦2,000,000 – ₦10,000,000</option>
+              <option>Above ₦10,000,000</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="budgetApproved">Is budget approved?</label>
+            <select id="budgetApproved" name="budgetApproved">
+              <option value="">Select…</option>
+              <option>Yes, approved</option>
+              <option>In process</option>
+              <option>No, still exploring</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="decisionMaker">Who makes the final decision?</label>
+            <select id="decisionMaker" name="decisionMaker">
+              <option value="">Select…</option>
+              <option>I do</option>
+              <option>I recommend, someone else approves</option>
+              <option>Committee / Board</option>
+              <option>Owner / Landlord</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="source">How did you hear about us?</label>
+            <select id="source" name="source">
+              <option value="">Select…</option>
+              <option>Referral</option>
+              <option>Google search</option>
+              <option>WhatsApp</option>
+              <option>Facebook / Instagram</option>
+              <option>LinkedIn</option>
+              <option>Saw your team on site</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:18px;">
+          <label>Is there a procurement process?</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="procurement" value="No, direct engagement" checked><span>No, direct engagement</span></label>
+            <label class="chip"><input type="radio" name="procurement" value="Yes, formal procurement"><span>Yes, formal procurement</span></label>
+            <label class="chip"><input type="radio" name="procurement" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:18px;">
+          <label>Upload photos or videos of the problem (optional, up to 6 files)</label>
+          <div class="drop" id="drop">
+            <div class="drop__icon">📷</div>
+            <p class="drop__title">Click to upload or drag &amp; drop</p>
+            <p class="drop__hint">Photos and short videos help us assess faster · Max 5MB each · 8MB total</p>
+            <input type="file" id="fileInput" name="photos" class="sr-only" multiple accept="image/*,video/*">
+          </div>
+          <ul class="file-list" id="fileList"></ul>
+        </div>
+
+        <div class="field" style="margin-top:22px;">
+          <label class="chip" style="display:flex;align-items:flex-start;gap:10px;">
+            <input type="checkbox" id="consent" name="consent" required style="position:relative;opacity:1;pointer-events:auto;width:18px;height:18px;margin-top:2px;accent-color:#0b2a45;flex:0 0 auto;">
+            <span style="border:none;padding:0;background:none;box-shadow:none;font-size:.86rem;color:#3a4d60;font-weight:500;">
+              I agree to be contacted by Prime Maintenance Culture about this request. <span class="req">*</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label class="chip" style="display:flex;align-items:flex-start;gap:10px;">
+            <input type="checkbox" id="privacy" name="privacy" required style="position:relative;opacity:1;pointer-events:auto;width:18px;height:18px;margin-top:2px;accent-color:#0b2a45;flex:0 0 auto;">
+            <span style="border:none;padding:0;background:none;box-shadow:none;font-size:.86rem;color:#3a4d60;font-weight:500;">
+              I have read and accept the privacy policy. <span class="req">*</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- ---------- SUBMIT ERROR ---------- -->
+      <div class="alert hidden" id="submitError" role="alert">
+        <strong>We couldn't send your request.</strong>
+        <span id="submitErrorMsg"></span>
+        <p style="margin:8px 0 0;">
+          Please try again, or reach us directly on
+          <a href="tel:+2349066115252">+234 90 6611 5252</a> ·
+          <a href="mailto:mr.agunechemba@gmail.com">mr.agunechemba@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- ---------- NAV ---------- -->
+      <div class="nav">
+        <button type="button" class="btn btn--ghost" id="prevBtn">← Back</button>
+        <button type="button" class="btn btn--primary" id="nextBtn">Continue</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ============ SUCCESS CARD ============ -->
+  <div class="card success hidden" id="successCard">
+    <div class="success__icon">✓</div>
+    <h2>Request received</h2>
+    <p>Thank you, <strong id="sName">there</strong>. A Prime Maintenance Culture specialist will contact you within 24 hours to arrange your assessment.</p>
+    <p>A confirmation has been emailed to <strong id="sEmail">your inbox</strong>.</p>
+    <p class="ref">Reference: <strong id="sRef">PMC-000000-000000000-XXXXX</strong></p>
+
+    <div class="summary" id="summary"></div>
+
+    <button class="btn btn--ghost" id="againBtn">Submit another request</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

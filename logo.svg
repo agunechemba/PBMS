@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="PMC — Prime Maintenance Culture">
+  <defs>
+    <linearGradient id="pmcNavy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b2a45"/>
+      <stop offset="1" stop-color="#1d5c8a"/>
+    </linearGradient>
+    <linearGradient id="pmcAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5a524"/>
+      <stop offset="1" stop-color="#d98a0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bird perched on the wordmark -->
+  <g>
+    <!-- Tail -->
+    <path d="M 170 105 L 128 120 L 155 92 Z" fill="url(#pmcNavy)"/>
+
+    <!-- Body -->
+    <path d="M 170 90
+             C 170 65 195 55 220 60
+             C 245 64 255 85 255 105
+             C 255 128 235 140 210 138
+             C 185 136 170 115 170 90 Z"
+          fill="url(#pmcNavy)"/>
+
+    <!-- Raised wing (accent) -->
+    <path d="M 190 85
+             C 185 55 205 35 232 33
+             C 224 54 210 74 200 90 Z"
+          fill="url(#pmcAccent)"/>
+
+    <!-- Head -->
+    <circle cx="253" cy="68" r="15" fill="url(#pmcNavy)"/>
+
+    <!-- Beak -->
+    <path d="M 265 64 L 288 70 L 265 76 Z" fill="url(#pmcAccent)"/>
+
+    <!-- Eye -->
+    <circle cx="259" cy="64" r="2.5" fill="#fff"/>
+
+    <!-- Legs resting on the "M" -->
+    <line x1="205" y1="138" x2="205" y2="166" stroke="url(#pmcNavy)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="225" y1="136" x2="225" y2="166" stroke="url(#pmcNavy)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- PMC wordmark -->
+  <text x="200" y="255"
+        font-family="'Arial Black', 'Segoe UI', Arial, Helvetica, sans-serif"
+        font-size="120" font-weight="900"
+        fill="url(#pmcNavy)"
+        text-anchor="middle"
+        letter-spacing="6">PMC</text>
+</svg>
