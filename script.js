@@ -1,5 +1,5 @@
 /* ============================================================
-   script.js — Prime Maintenance Culture
+   script.js — Prime Building Maintenance Services
    - Sends submissions to a Google Apps Script Web App
    - Persists in-progress form data to localStorage
    ============================================================ */
@@ -9,9 +9,9 @@
   /* ------------------------------------------------------------
      CONFIG — paste your deployed Apps Script Web App URL below.
      ------------------------------------------------------------ */
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzx21GhuOjXRUtG6qqWtPtaiZIgKka49cI3_WEnZlI0r5wvhnjXbvCSEq_8QEti2uCV/exec";
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyFEVrb2aKfa7ido4UbAR9JI5coif7U_Mk2ydp_Fl-jCHhBmwZFyvjewAVtSMPBHkaN/exec";
 
-  const STORAGE_KEY    = "pmc_lead_form_v1";
+  const STORAGE_KEY    = "pbms_lead_form_v1";
   const STORAGE_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
   const SAVE_DEBOUNCE  = 450;                     // ms
 
@@ -45,7 +45,7 @@
      ============================================================ */
   const storage = (function () {
     try {
-      const t = "__pmc_test__";
+      const t = "__pbms_test__";
       window.localStorage.setItem(t, t);
       window.localStorage.removeItem(t);
       return window.localStorage;
@@ -72,7 +72,7 @@
       storage.setItem(STORAGE_KEY, JSON.stringify(payload));
     } catch (e) {
       // Quota exceeded or storage unavailable — fail silently
-      console.warn("PMC: could not save form state", e);
+      console.warn("PBMS: could not save form state", e);
     }
   }
 
@@ -436,7 +436,7 @@
       .slice(0, 5)
       .padEnd(5, "X");
 
-    return `PPH-${yy}${mm}${dd}-${hh}${mi}${ss}${ms}-${emailPrefix}`;
+    return `PBMS-${yy}${mm}${dd}-${hh}${mi}${ss}${ms}-${emailPrefix}`;
   }
 
   /* ============================================================

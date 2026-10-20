@@ -1,53 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="PMC — Prime Maintenance Culture">
-  <defs>
-    <linearGradient id="pmcNavy" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b2a45"/>
-      <stop offset="1" stop-color="#1d5c8a"/>
-    </linearGradient>
-    <linearGradient id="pmcAccent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f5a524"/>
-      <stop offset="1" stop-color="#d98a0b"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- Background (Optional, set to transparent) -->
+  <rect width="400" height="400" fill="transparent"/>
 
-  <!-- Bird perched on the wordmark -->
-  <g>
-    <!-- Tail -->
-    <path d="M 170 105 L 128 120 L 155 92 Z" fill="url(#pmcNavy)"/>
+  <!-- ELEPHANT ICON (Front-Facing) -->
+  <g id="elephant-icon">
+    
+    <!-- Outer Ears (Navy) -->
+    <path d="M 180 90 
+             C 90 60 40 150 80 240 
+             C 110 280 160 230 180 180 Z" fill="#194C7A" />
+    <path d="M 220 90 
+             C 310 60 360 150 320 240 
+             C 290 280 240 230 220 180 Z" fill="#194C7A" />
+             
+    <!-- Inner Ears (Orange Accents) -->
+    <path d="M 165 115 
+             C 110 100 70 160 95 215 
+             C 115 240 145 200 165 165 Z" fill="#F49E1A" />
+    <path d="M 235 115 
+             C 290 100 330 160 305 215 
+             C 285 240 255 200 235 165 Z" fill="#F49E1A" />
 
-    <!-- Body -->
-    <path d="M 170 90
-             C 170 65 195 55 220 60
-             C 245 64 255 85 255 105
-             C 255 128 235 140 210 138
-             C 185 136 170 115 170 90 Z"
-          fill="url(#pmcNavy)"/>
+    <!-- Tusks (Orange) -->
+    <path d="M 170 175 
+             C 130 185 100 205 85 235 
+             C 115 225 140 210 175 195 Z" fill="#F49E1A" />
+    <path d="M 230 175 
+             C 270 185 300 205 315 235 
+             C 285 225 260 210 225 195 Z" fill="#F49E1A" />
 
-    <!-- Raised wing (accent) -->
-    <path d="M 190 85
-             C 185 55 205 35 232 33
-             C 224 54 210 74 200 90 Z"
-          fill="url(#pmcAccent)"/>
+    <!-- Main Head & Trunk (Navy) -->
+    <path d="M 160 100 
+             C 160 50 190 55 200 70 
+             C 210 55 240 50 240 100 
+             C 240 140 220 160 200 160 
+             C 180 160 160 140 160 100 Z" fill="#194C7A" />
+             
+    <path d="M 180 140 
+             L 172 250 
+             C 172 290 190 310 200 310 
+             C 210 310 228 290 228 250 
+             L 220 140 
+             C 210 160 190 160 180 140 Z" fill="#194C7A" />
 
-    <!-- Head -->
-    <circle cx="253" cy="68" r="15" fill="url(#pmcNavy)"/>
+    <!-- Trunk Wrinkles (Subtle White Lines) -->
+    <path d="M 176 230 Q 200 240 224 230" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2" fill="none" />
+    <path d="M 174 260 Q 200 270 226 260" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2" fill="none" />
+    <path d="M 175 285 Q 200 295 225 285" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2" fill="none" />
 
-    <!-- Beak -->
-    <path d="M 265 64 L 288 70 L 265 76 Z" fill="url(#pmcAccent)"/>
+    <!-- Eyes (White with Navy Pupils) -->
+    <circle cx="175" cy="125" r="9" fill="#FFFFFF" />
+    <circle cx="175" cy="125" r="4" fill="#194C7A" />
+    
+    <circle cx="225" cy="125" r="9" fill="#FFFFFF" />
+    <circle cx="225" cy="125" r="4" fill="#194C7A" />
 
-    <!-- Eye -->
-    <circle cx="259" cy="64" r="2.5" fill="#fff"/>
-
-    <!-- Legs resting on the "M" -->
-    <line x1="205" y1="138" x2="205" y2="166" stroke="url(#pmcNavy)" stroke-width="5" stroke-linecap="round"/>
-    <line x1="225" y1="136" x2="225" y2="166" stroke="url(#pmcNavy)" stroke-width="5" stroke-linecap="round"/>
   </g>
 
-  <!-- PMC wordmark -->
-  <text x="200" y="255"
-        font-family="'Arial Black', 'Segoe UI', Arial, Helvetica, sans-serif"
-        font-size="120" font-weight="900"
-        fill="url(#pmcNavy)"
-        text-anchor="middle"
-        letter-spacing="6">PMC</text>
+  <!-- TEXT: PBMS -->
+  <text x="200" y="375" 
+        font-family="'Arial Black', Impact, 'Segoe UI Black', sans-serif" 
+        font-weight="900" 
+        font-size="100" 
+        fill="#194C7A" 
+        text-anchor="middle" 
+        letter-spacing="-3">
+    PBMS
+  </text>
 </svg>
